@@ -8,6 +8,13 @@ controller_manager:
     velocity_controller:
       type: velocity_controllers/JointGroupVelocityController
     
+    position_controller:
+      type: position_controllers/JointGroupPositionController
+
+    pole_controller:
+      type: position_controllers/JointGroupPositionController
+
+    
 
 velocity_controller:
   ros__parameters:
@@ -15,3 +22,14 @@ velocity_controller:
     joints:
       - foot_joint
     
+position_controller:
+  ros__parameters:
+    type: position_controllers/JointGroupPositionController
+    joints:
+      - foot_joint
+
+pole_controller:
+  ros__parameters:
+    type: position_controllers/JointGroupPositionController
+    joints:
+      - cartpole_joint

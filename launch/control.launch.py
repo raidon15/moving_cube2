@@ -47,7 +47,7 @@ def generate_launch_description():
             spawn_controller,
             spawn_position_controller_cart,
             spawn_velocity_controller_cart,
-            spawn_position_controller_pole,
+            #spawn_position_controller_pole,
             
         ]
     )

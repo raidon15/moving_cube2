@@ -1,0 +1,31 @@
+<robot name="robotiq_hande">
+  
+  <link name="world"/>
+  <joint name="fixed" type="fixed">
+        <parent link="world"/>
+        <child link="hand_e_link"/>
+    </joint>
+  <link name="hand_e_link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0.04607"/>
+      <mass value="0.86387"/>
+      <inertia ixx="1017560E-9" ixy="0" ixz="2235E-9" iyy="1028041E-9" iyz="0" izz="489810E-9"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="file:///home/benjamin/ros2_ws/src/moving_cube2/moving_cube2/meshes/my_hande.dae" scale="1.0 1.0 1.0"/>
+      </geometry>
+      <material name="Dark">
+        <color rgba=".1 0.1 0.1 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="file:///home/benjamin/ros2_ws/src/moving_cube2/moving_cube2/meshes/my_hande.dae" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  
+</robot>

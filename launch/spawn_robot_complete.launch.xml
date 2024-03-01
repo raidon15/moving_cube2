@@ -1,9 +1,9 @@
 <?xml version='1.0' ?>
 <launch>
     <!-- Publish URDF file in robot_description topic -->
-    <include file="$(find-pkg-share moving_cube2)/launch/moving_cube_control.launch.py"/>
+    <include file="$(find-pkg-share moving_cube2)/launch/urdf.launch.py"/>
     <!-- Read robot_description and spawn in gazebo running sim -->
     <include file="$(find-pkg-share moving_cube2)/launch/spawn_robot_description.launch.py"/>
     <!-- Load the controllers -->
-    <include file="$(find-pkg-share moving_cube2)/launch/control.launch.py"/>
+    <include file="$(find-pkg-share moving_cube2)/launch/hand-e_control.launch.py"/>
 </launch>

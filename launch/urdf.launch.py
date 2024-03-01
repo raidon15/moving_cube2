@@ -9,7 +9,7 @@ from launch_ros.actions import Node
 def generate_launch_description():
 
     ####### DATA INPUT ##########
-    urdf_file = 'my_cartpole.urdf'
+    urdf_file = 'robotiq_hand_e.urdf'
     #xacro_file = "box_bot.xacro"
     package_description = "moving_cube2"
 

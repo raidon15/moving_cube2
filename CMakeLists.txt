@@ -20,6 +20,7 @@ install(
     worlds
     urdf
     config
+    rviz
   DESTINATION
     share/${PROJECT_NAME}/
 )

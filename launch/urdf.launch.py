@@ -17,7 +17,7 @@ def generate_launch_description():
     print("Fetching URDF ==>")
     robot_desc_path = os.path.join(get_package_share_directory(package_description), "urdf", urdf_file)
 
-    # Robot State Publisher
+    #Robot State Publisher
 
     robot_state_publisher_node = Node(
         package='robot_state_publisher',
@@ -27,11 +27,23 @@ def generate_launch_description():
         output="screen"
     )
 
+    #RVIZ Configuration
+    rviz_config_dir = os.path.join(get_package_share_directory(package_description), 'rviz', 'rviz.rviz')
 
-    # create and return launch description object
+
+    rviz_node = Node(
+            package='rviz2',
+            executable='rviz2',
+            output='screen',
+            name='rviz_node',
+            parameters=[{'use_sim_time': True}],
+            arguments=['-d', rviz_config_dir])
+
+    #create and return launch description object
     return LaunchDescription(
         [            
             robot_state_publisher_node,
+            rviz_node,
             
         ]
     )
